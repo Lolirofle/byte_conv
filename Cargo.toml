@@ -1,0 +1,9 @@
+[package]
+name = "byte_conv"
+version = "0.1.0"
+authors = ["Lolirofle <lolipopple@hotmail.com>"]
+description = "Simple conversion traits to bytes"
+homepage = "https://github.com/Lolirofle/byte_conv"
+repository = "https://github.com/Lolirofle/byte_conv.git"
+keywords = ["byte","bytes","conversions"]
+license = "MIT"
