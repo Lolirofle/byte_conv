@@ -1,7 +1,7 @@
 use std::{mem,slice};
 
 ///A type which is representable as bytes
-trait As{
+pub trait As{
 	///Represent a pointer to a type as an array of bytes
 	fn as_bytes(&self) -> &[u8];
 
@@ -10,7 +10,7 @@ trait As{
 }
 
 ///A type which can be constructed from bytes unsafely
-trait From{
+pub trait From{
 	///Construct a type from an array of bytes
 	unsafe fn from_bytes(bytes: &[u8]) -> Self;
 }
