@@ -12,6 +12,7 @@ pub trait As{
 ///A type which can be constructed from bytes unsafely
 pub trait From{
 	///Construct a type from an array of bytes
+	//This is only safe if all byte values represents a state in the type (When each of the (2^number_of_bits) values are mapped to a state in the type). Insert a manual check when this is not the case.
 	unsafe fn from_bytes(bytes: &[u8]) -> Self;
 }
 
@@ -35,7 +36,6 @@ impl<T> As for T
 	}
 }
 
-//TODO: This is safe if all values are valid, but not otherwise (What is this called? Total relation/mapping for bytes?)
 impl<T> From for T
 	where T: Sized + Copy
 {
